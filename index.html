@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlayTopia | Tech-Fest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="splash" id="splash" aria-hidden="true">
+    <div class="splash-inner">
+      <div class="splash-logo" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1 class="splash-title">PlayTopia</h1>
+      <div class="splash-sub">
+        <p>Bit By Bit Club Presents</p>
+      </div>
+    </div>
+  </div>
+  <a class="logo-badge" href="#home" aria-label="Back to top">
+    <span class="logo-bars" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <span class="logo-text">Bit By Bit Club</span>
+  </a>
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-glow"></div>
+    <div class="cursor-core">
+      <span class="cursor-ring"></span>
+      <span class="cursor-dot"></span>
+    </div>
+  </div>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Bit By Bit Club</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#mini-games">Mini Games</a>
+        <a href="#mega-game">Mega Game</a>
+        <a href="#schedule">Schedule</a>
+      </nav>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQ5irJwG6kWEsxujRNKnwEvao8Jyx-F3ZvM8bhG8RcpG4QCw/viewform" class="nav-cta pill" target="_blank" rel="noopener">Register</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Bit By Bit Club · VIT Bhopal</p>
+          <h1>      PLAYTOPIA</h1>
+          <p class="tagline">Fast-paced games. High energy. Pure chaos.</p>
+          <div class="event-timer" aria-live="polite">
+            <p class="timer-label">Event starts in</p>
+            <div class="timer-grid">
+              <div class="timer-unit">
+                <span class="timer-value" data-timer="days">00</span>
+                <span class="timer-text">Days</span>
+              </div>
+              <div class="timer-unit">
+                <span class="timer-value" data-timer="hours">00</span>
+                <span class="timer-text">Hours</span>
+              </div>
+              <div class="timer-unit">
+                <span class="timer-value" data-timer="minutes">00</span>
+                <span class="timer-text">Minutes</span>
+              </div>
+              <div class="timer-unit">
+                <span class="timer-value" data-timer="seconds">00</span>
+                <span class="timer-text">Seconds</span>
+              </div>
+            </div>
+          </div>
+          <div class="quick-stats">
+            <div class="stat"><span>Date</span><strong> 27 Feb</strong></div>
+            <div class="stat"><span>Time</span><strong>11:00 AM – 4:00 PM</strong></div>
+            <div class="stat"><span>Venue at</span><strong>AB-1 127/128</strong></div>
+            <div class="stat"><span>Entry</span><strong> 75₹ [Mini games] <br> 80₹ [Mega Game]</strong></div>
+          </div>
+          <div class="hero-cta">
+            <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeQ5irJwG6kWEsxujRNKnwEvao8Jyx-F3ZvM8bhG8RcpG4QCw/viewform" target="_blank" rel="noopener">Register Now</a>
+            <a class="btn ghost" href="#mini-games">See Games</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>About PlayTopia</h2>
+      </div>
+      <div class="glass card">
+        <p>→ PlayTopia is a student-centric interactive gaming experience built for participation, inclusivity, and teamwork. Every challenge is short, energetic, and designed to keep crowds buzzing. With minimal resources and maximum fun, teams sprint through rapid tasks that reward quick thinking, collaboration, and creativity.</p>
+        <p>→ Bit By Bit takes pride in delivering innovative and engaging student centric events, and this edition is no exception. We are excited to introduce a high-energy interactive gaming event designed to maximize participation, inclusivity, and engagement.</p>
+        <p>→ The event features a series of short, fast-paced games that encourage teamwork, quick thinking, and social interaction. With minimal resources and creative execution, the focus is on shared enjoyment, experimentation, and creating memorable campus experiences.</p>
+      </div>
+    </section>
+
+    <section id="aims" class="section aims">
+      <div class="section-head">
+        <p class="eyebrow">Purpose</p>
+        <h2>Event Aims</h2>
+      </div>
+      <div class="aims-row">
+        <div class="aim-card glass">
+          <h3>Foster Active Student Engagement</h3>
+          <span class="aim-divider"></span>
+          <p>Encourage active participation through short-duration, interactive games that prioritize energy, inclusivity, and involvement over passive observation.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Encourage Presence of Mind &amp; Quick Decision-Making</h3>
+          <span class="aim-divider"></span>
+          <p>Place participants in time-bound, pressure-driven challenges that test focus, composure, and the ability to make fast decisions under stress.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Promote Social Interaction &amp; Peer Connection</h3>
+          <span class="aim-divider"></span>
+          <p>Design experiences that naturally turn unfamiliar participants into collaborators and teammates through shared challenges and teamwork.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Innovation Through Simplicity</h3>
+          <span class="aim-divider"></span>
+          <p>Demonstrate how meaningful and engaging experiences can be created using minimal resources and everyday materials.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Normalize Experimentation &amp; Failure</h3>
+          <span class="aim-divider"></span>
+          <p>Create a safe and enjoyable environment where mistakes are accepted as part of learning, experimentation, and participation.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Maintain Continuous Crowd Energy</h3>
+          <span class="aim-divider"></span>
+          <p>Sustain movement, excitement, and attention through visually engaging, fast-paced games with high replay and spectator value.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Build Coordination, Adaptability &amp; Confidence</h3>
+          <span class="aim-divider"></span>
+          <p>Enhance physical coordination and mental agility by balancing action-based challenges with quick thinking in non-academic settings.</p>
+        </div>
+        <div class="aim-card glass">
+          <h3>Create Lasting, Shareable Memories</h3>
+          <span class="aim-divider"></span>
+          <p>Generate enjoyable, photogenic moments that build campus-wide visibility and are easily shareable across social media platforms.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mega-poster" class="section mega-poster" aria-label="Mega Game poster">
+      <img class="mega-poster-image" src="assets/poster/poster.jpg" alt="Mega Game poster" loading="lazy" />
+    </section>
+
+    <section id="mega-game" class="section mega">
+      <div class="mega-container">
+        <div class="mega-content-card glass">
+          <p class="eyebrow">Mega Game</p>
+          <h2>Tech-Mafia City Takeover</h2>
+          <div class="mega-price glass">
+            <span class="mega-price-label">Entry Fee</span>
+            <strong class="mega-price-value">₹80 per person </strong>
+          </div>
+          <span class="game-divider mega-divider"></span>
+          <div class="mega-card-body">
+            <p class="mega-text">A 3-hour live, interactive strategy saga for 20–30 participants. Players are divided into rival “mafia families” competing to control a city through negotiation, alliances, hacking, spying, and territory battles.</p>
+            <p class="mega-text">The game unfolds in fast 15-minute rounds. Teams choose actions, negotiate face-to-face, and resolve outcomes like hacks, trades, or attacks. Different city zones grant money, power, and special abilities, while secret objectives and betrayals keep the gameplay dynamic.</p>
+            <p class="mega-text">The event culminates in a dramatic final takeover round where all alliances dissolve and teams fight openly for control. The team with the highest overall power score is crowned the winner.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mini-games" class="section games">
+      <div class="section-head">
+        <p class="eyebrow">Mini Games</p>
+        <h2>Rapid-Fire Challenges</h2>
+        <div class="games-price glass">
+          <span class="games-price-label">Entry Fee</span>
+          <strong class="games-price-value">₹75</strong>
+          <span class="games-price-note">Valid for all 8 games</span>
+        </div>
+      </div>
+      <div class="games-grid">
+        <div class="game-card glass">
+          <h3>Locked Room Card (Mini Escape-Style)</h3>
+          <span class="game-divider"></span>
+          <p>Players are handed a sealed envelope labelled “Server Room: Locked,” setting the tone instantly. Inside are three compact challenges—a riddle, a number pattern, and a word clue—each demanding sharp thinking. Solving all three reveals a single 3-digit access code. Players report the code to the volunteer to escape and win. Clean, premium escape-room energy delivered in under three minutes with minimal setup.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>Spin the Dare Wheel</h3>
+          <span class="game-divider"></span>
+          <p>One spin decides a quick, harmless dare like push-ups, robot mimicry, a five-second dance, or speaking like an AI. Tasks are silly, visual, and instantly understandable. Players perform on the spot, drawing laughter and attention. Zero cost, zero setup, maximum chaos and fun.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>Tech Bowling</h3>
+          <span class="game-divider"></span>
+          <p>A simple, old-school physical game with a tech twist that just works. Ten reused plastic bottles marked with points are set like bowling pins. Players roll a soft ball and get three rounds to score at least 25 points. One special pin—the Bug Bottle or Bonus Bottle—adds surprise points and laughs. No skill required, fast to play, and perfect for crowd engagement and photos.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>Dart &amp; Arrow Arena</h3>
+          <span class="game-divider"></span>
+          <p>A clean, classic skill game that pulls crowds effortlessly. Players get three shots using magnetic darts or suction-cup arrows. The target board has bold color zones linked to prizes or rewards. From a distance it looks exciting—arrows flying, people cheering, instant reactions. Simple rules, strong visuals, and high replay value.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>One-Minute Perfect</h3>
+          <span class="game-divider"></span>
+          <p>A pressure-packed challenge that tests focus and nerves. Players are shown a card with five simple physical tasks like cup stacking, bucket toss, bottle flip, rapid taps, or a clean spin. They get exactly 60 seconds to finish all five in order. One slip or mistake ends the run. Brutal tension and extremely watchable.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>Guess the Photo</h3>
+          <span class="game-divider"></span>
+          <p>A fast-thinking visual game where players see a blurred, zoomed-in, or partially hidden image and must identify it correctly. Images include objects, logos, famous places, or tech-related items. Correct guesses score points or qualify players for the next round. Simple to run and great for pulling curious onlookers.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>Ping Tic Tac Toe</h3>
+          <span class="game-divider"></span>
+          <p>A physical twist on classic tic-tac-toe. Players toss ping-pong balls into a grid instead of marking Xs and Os. Each successful throw claims a box. Missed throws lose turns, raising tension. Strategy matters as much as aim, making it fun to watch and competitive enough to trigger rematches.</p>
+        </div>
+        <div class="game-card glass">
+          <h3>Balloon Pyramid</h3>
+          <span class="game-divider"></span>
+          <p>Players are given a fixed time to build a stable pyramid using balloons, either by stacking or taping. The challenge lies in balance, coordination, and teamwork under pressure. If the pyramid collapses, the attempt fails instantly. Bright visuals, suspense, and guaranteed laughter make it a crowd favorite.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section details">
+      <div class="section-head">
+        <p class="eyebrow">Details</p>
+        <h2>Event Details</h2>
+      </div>
+      <div class="details-card glass">
+        <div class="details-item">
+          <span>Event Name</span>
+          <strong>PlayTopia</strong>
+        </div>
+        <div class="details-item">
+          <span>Organized By</span>
+          <strong>Bit By Bit Club</strong>
+        </div>
+        <div class="details-item">
+          <span>Date</span>
+          <strong>27 February </strong>
+        </div>
+        <div class="details-item">
+          <span>Time</span>
+          <strong>11:00 AM – 4:00 PM</strong>
+        </div>
+        <div class="details-item">
+          <span>Venue</span>
+          <strong>Offline</strong>
+        </div>
+        <div class="details-item">
+          <span>Entry Fee</span>
+          <strong>75₹ [Mini games] | 80₹ [Mega Game]</strong>
+        </div>
+        <div class="details-item">
+          <span>Prize</span>
+          <strong>Goodies</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="last-year" class="section last-year">
+      <div class="section-head">
+        <p class="eyebrow">Past Edition</p>
+        <h2>Last Year at Bit by Bit Club</h2>
+        <span class="game-divider"></span>
+      </div>
+      <div class="last-year-grid">
+        <div class="last-year-card glass video-card" aria-label="Highlight reel">
+          <div class="media-shell">
+            <div class="video-stage">
+              <video class="video-slide active" src="assets/videos/v1.mp4" autoplay muted playsinline preload="auto" loop aria-label="PlayTopia highlight video 1"></video>
+              <video class="video-slide" src="assets/videos/v2.mp4" autoplay muted playsinline preload="auto" loop aria-label="PlayTopia highlight video 2"></video>
+              <video class="video-slide" src="assets/videos/v3.mp4" autoplay muted playsinline preload="auto" loop aria-label="PlayTopia highlight video 3"></video>
+            </div>
+            <button class="video-toggle" type="button" aria-pressed="false">Tap for sound</button>
+          </div>
+          <div class="last-year-dots video-dots" role="tablist" aria-label="Highlight videos"></div>
+        </div>
+        <div class="last-year-card glass photo-card" aria-label="Photo showcase">
+          <img class="photo-slide" src="assets/images/p1.jpeg" alt="PlayTopia moment 1" loading="lazy" />
+          <div class="last-year-dots photo-dots" role="tablist" aria-label="Photo highlights"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="section register">
+      <div class="section-head register-head">
+        <h2>HOW TO REGISTER</h2>
+      </div>
+
+      <div class="register-steps">
+        <div class="register-step glass">
+          <div class="step-number">1</div>
+          <h3>Scan the QR</h3>
+          <p>Secure your spot in under 60 seconds.</p>
+        </div>
+        <div class="register-step glass">
+          <div class="step-number">2</div>
+          <h3>Fill the Form</h3>
+          <p>Provide your details and game preferences.</p>
+        </div>
+        <div class="register-step glass">
+          <div class="step-number">3</div>
+          <h3>Show Up &amp; Play</h3>
+          <p>Join us on the event day and start playing.</p>
+        </div>
+      </div>
+
+      <div class="register-main">
+        <div class="register-qr glass">
+          <div class="qr-box">
+            <img src="qr.png" alt="QR code for registration" loading="lazy" />
+          </div>
+        </div>
+        <div class="register-info glass">
+          <div>
+            <p class="eyebrow">Quick Registration</p>
+            <h3>Register for PlayTopia</h3>
+            <p class="panel-text">· Limited slots · Bring your squad or join a crew on the spot.</p>
+          </div>
+          <ul class="panel-list">
+            <li>Access to all 8 mini-games</li>
+            <li>Exclusive event goodies</li>
+            <li>Compete for amazing prizes</li>
+            <li>Network with fellow gamers</li>
+          </ul>
+          <div class="register-cta">
+            <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeQ5irJwG6kWEsxujRNKnwEvao8Jyx-F3ZvM8bhG8RcpG4QCw/viewform" target="_blank" rel="noopener">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="brand">PlayTopia</p>
+        <p>Bit By Bit Club</p>
+        <p>VIT Bhopal University</p>
+      </div>
+      <div>
+        <p class="eyebrow">Quick Links</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#mini-games">Mini Games</a>
+          <a href="#mega-game">Mega Game</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQ5irJwG6kWEsxujRNKnwEvao8Jyx-F3ZvM8bhG8RcpG4QCw/viewform" target="_blank" rel="noopener">Register</a>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Socials</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/bitbybit_vitb" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bit-by-bit-club/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2.4"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="5" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© PlayTopia – Bit By Bit Club</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
