@@ -153,7 +153,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-const eventStart = new Date('2026-02-26T10:00:00');
+const eventStart = new Date('2026-02-27T11:00:00');
 
 function updateTimer() {
   if (!timerElements.days) return;
@@ -495,3 +495,128 @@ if (pastPhotoCard && !prefersReducedMotion) {
     resetPastPhotoTimer();
   });
 }
+
+// Meet the Leads + Developer modals
+const modalTriggers = Array.from(document.querySelectorAll('[data-modal-open]'));
+const focusableSelector = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+const modalState = {
+  active: null,
+};
+
+function setModalImages(container) {
+  if (!container) return;
+  const images = Array.from(container.querySelectorAll('img[data-src]'));
+  images.forEach((img) => {
+    if (img.dataset.loaded) return;
+    const src = img.getAttribute('data-src');
+    if (src) {
+      img.src = src;
+      img.dataset.loaded = 'true';
+    }
+  });
+}
+
+function trapModalFocus(event, modalEl) {
+  if (!modalEl) return;
+  const focusable = Array.from(modalEl.querySelectorAll(focusableSelector));
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function handleModalKeydown(event) {
+  if (!modalState.active) return;
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeModal(modalState.active);
+    return;
+  }
+  if (event.key === 'Tab') {
+    trapModalFocus(event, modalState.active.modal);
+  }
+}
+
+function openModal(state) {
+  if (!state || !state.overlay || !state.modal) return;
+  state.lastFocusedElement = document.activeElement;
+  state.overlay.hidden = false;
+  state.overlay.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  setModalImages(state.overlay);
+  requestAnimationFrame(() => {
+    state.overlay.classList.add('is-open');
+  });
+  window.setTimeout(() => {
+    state.modal.focus();
+  }, 60);
+  modalState.active = state;
+  document.addEventListener('keydown', handleModalKeydown);
+}
+
+function closeModal(state) {
+  if (!state || state.closing || !state.overlay) return;
+  state.closing = true;
+  state.overlay.classList.remove('is-open');
+  state.overlay.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  window.setTimeout(() => {
+    state.overlay.hidden = true;
+    state.closing = false;
+    if (state.lastFocusedElement && typeof state.lastFocusedElement.focus === 'function') {
+      state.lastFocusedElement.focus();
+    }
+  }, 280);
+  if (modalState.active === state) {
+    modalState.active = null;
+    document.removeEventListener('keydown', handleModalKeydown);
+  }
+}
+
+function getOverlayId(modalId) {
+  if (!modalId) return null;
+  if (modalId.endsWith('-modal')) {
+    return modalId.replace('-modal', '-overlay');
+  }
+  return `${modalId}-overlay`;
+}
+
+modalTriggers.forEach((trigger) => {
+  const modalId = trigger.dataset.modalOpen;
+  const overlayId = getOverlayId(modalId);
+  const overlay = overlayId ? document.getElementById(overlayId) : null;
+  const modal = modalId ? document.getElementById(modalId) : null;
+  if (!overlay || !modal) return;
+
+  const closeButton = overlay.querySelector('.leads-close');
+  const state = {
+    overlay,
+    modal,
+    closeButton,
+    closing: false,
+    lastFocusedElement: null,
+  };
+
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    openModal(state);
+  });
+
+  if (closeButton) {
+    closeButton.addEventListener('click', () => closeModal(state));
+  }
+
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closeModal(state);
+  });
+
+  if (!overlay.classList.contains('is-open')) {
+    document.body.classList.remove('modal-open');
+  }
+});
