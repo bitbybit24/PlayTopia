@@ -1071,6 +1071,18 @@ h3:hover,
   -webkit-backdrop-filter: blur(16px);
 }
 
+.mega-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.mega-copy {
+  display: grid;
+  gap: 16px;
+}
+
 .mega-card-body {
   display: grid;
   gap: 18px;
@@ -1144,6 +1156,14 @@ h3:hover,
   .mega-poster-image {
     max-height: 65vh;
   }
+
+  .mega-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mega-inline-poster {
+    max-height: 90vh;
+  }
 }
 
 .mega-card:hover {
@@ -1210,6 +1230,15 @@ h3:hover,
   padding-bottom: 120px;
 }
 
+.mega-inline-poster {
+  width: 100%;
+  max-height: 980px;
+  margin: 0;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid rgba(92, 225, 255, 0.25);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35), 0 0 18px rgba(92, 225, 255, 0.18);
+}
 .register-head h2 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
